@@ -11,10 +11,11 @@
 <body>
 
 
-    <nav>
+    <nav class="navbar">
         <div class="logo">CSSnippet</div>
 
-        <ul class="nav-links" id="navLinks">
+        <!-- Desktop Links -->
+        <ul class="nav-links">
             <li><a href="#">HOME</a></li>
             <li><a href="#">SERVICES</a></li>
             <li><a href="#">PORTFOLIO</a></li>
@@ -25,12 +26,23 @@
             <button class="btn">Login</button>
         </div>
 
-        <!-- Hamburger -->
+        <!-- Hamburger icon for mobile -->
         <div class="hamburger" id="hamburger">
-            ☰
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile side menu -->
+        <div class="side-menu" id="sideMenu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
         </div>
     </nav>
-
 
     <script src="script.js">
 
