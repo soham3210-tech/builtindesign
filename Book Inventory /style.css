@@ -1,0 +1,76 @@
+* General */ span {
+    display: inline-block;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 99%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Row backgrounds using attribute selectors */
+tr[class="read"] {
+    background-image: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+tr[class="to-read"] {
+    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+tr[class="in-progress"] {
+    background-image: linear-gradient(to right, #fddb92, #d1fdff);
+}
+
+/* Status styling */
+tr[class="to-read"] .status {
+    border: 1px solid purple;
+    background-image: linear-gradient(pink, violet);
+}
+
+tr[class="read"] .status {
+    border: 1px solid green;
+    background-image: linear-gradient(lightgreen, green);
+}
+
+tr[class="in-progress"] .status {
+    border: 1px solid orange;
+    background-image: linear-gradient(yellow, orange);
+}
+
+/* Status + rate common size */
+span[class="status"],
+span[class^="rate"] {
+    height: 25px;
+    width: 80px;
+    padding: 5px;
+}
+
+/* Stars (children of rate) */
+span[class^="rate"]>span {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 2px;
+    height: 10px;
+    width: 10px;
+    background-color: lightgray;
+}
+
+/* Rating logic */
+span[class*="one"]>span:nth-child(1) {
+    background-image: linear-gradient(gold, orange);
+}
+
+span[class*="two"]>span:nth-child(-n+2) {
+    background-image: linear-gradient(gold, orange);
+}
+
+span[class*="three"]>span {
+    background-image: linear-gradient(gold, orange);
+}
